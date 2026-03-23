@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // 其他配置保持不变（如 module、paths 等）
+    "types": ["vite/client"], // 核心：引入 Vite 客户端类型
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2020",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "vite.config.ts" // 确保包含 Vite 配置文件
+  ],
+}
