@@ -29,9 +29,7 @@ export const useUserStore = defineStore("user", {
       this.router = router;
     },
     async login(role: string) {
-      console.log(1);
       const res = await getUserInfoApi({ role });
-      console.log(2, res);
       if (res.code === 200) {
         const { token, userInfo } = res.data;
         console.log("Login successful, token set:", this.token); // 调试输出
