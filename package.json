@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
@@ -27,6 +28,8 @@
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/tsconfig": "^0.9.0",
     "cli": "link:/@commitlint/cli",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
     "eslint": "^10.1.0",
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.4.0",
@@ -50,5 +53,54 @@
     "*.{json,md}": [
       "prettier --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
+  },
+  "cz-git": {
+    "types": [
+      {
+        "value": "feat",
+        "name": "feat: ✨ 新功能"
+      },
+      {
+        "value": "fix",
+        "name": "fix: 🐛 修复bug"
+      },
+      {
+        "value": "docs",
+        "name": "docs: 📝 文档"
+      },
+      {
+        "value": "style",
+        "name": "style: 💄 格式"
+      },
+      {
+        "value": "refactor",
+        "name": "refactor: ♻️ 重构"
+      },
+      {
+        "value": "test",
+        "name": "test: ✅ 测试"
+      },
+      {
+        "value": "chore",
+        "name": "chore: 🔧 构建/工具"
+      }
+    ],
+    "scopes": [
+      "user",
+      "auth",
+      "permission",
+      "dashboard"
+    ],
+    "messages": {
+      "type": "请选择提交类型:",
+      "scope": "请选择影响范围（可选）:",
+      "subject": "请简要描述提交:",
+      "confirmCommit": "确认提交？"
+    }
   }
 }
