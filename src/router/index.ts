@@ -128,30 +128,6 @@ router.beforeEach(async (to, from) => {
       return "/login";
     }
   }
-  // // ❌ 未登录
-  // if (!token.value && to.path !== "/login") {
-  //   return "/login";
-  // }
-
-  // // ✅ 已登录但未加载动态路由（包括刷新）
-  // console.log("导航守卫检查：", token.value, isLoaded.value);
-  // if (token.value && !isLoaded.value) {
-  //   // if (to.path === "/login") {
-  //   //   return router[0]?.path; // 已登录但访问登录页，允许访问
-  //   // }
-  //   try {
-  //     const userStore = useUserStore();
-  //     await userStore.getRoutes();
-
-  //     isLoaded.value = true;
-
-  //     // ⚠️ 关键：重新进入当前页面
-  //     return { ...to, replace: true };
-  //   } catch (err) {
-  //     console.error("动态路由加载失败", err);
-  //     return "/login";
-  //   }
-  // }
 });
 export const setupRouter = (app: App<Element>) => {
   app.use(router);
