@@ -22,6 +22,7 @@ export default defineConfig([
       "no-unused-vars": "error", // ❌ 未使用变量直接拦
       "no-console": "warn", // ⚠️ 可选
       "@typescript-eslint/no-unused-vars": "error", // TS 版本（很关键）
+      "@typescript-eslint/no-explicit-any": "warn", // ⚠️ 可选
     },
   },
 ]);

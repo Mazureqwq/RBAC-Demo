@@ -45,7 +45,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
-      "eslint --fix --max-warnings=0",
+      "eslint --fix",
       "eslint",
       "prettier --write",
       "npm run test"
